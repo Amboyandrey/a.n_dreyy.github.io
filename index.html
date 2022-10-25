@@ -112,8 +112,12 @@
 				sidemeu.style.left = "0";
 			}
 			function closemenu(){
-				sidemeu.style.left = "-200px";
-			}
+				if ((window.innerWidth < 600)){
+					sidemeu.style.left = "-200px";
+				} else {
+					sidemeu.style.left = "0";
+				}
+			}	
 	</script>
 </body>
 </html>
