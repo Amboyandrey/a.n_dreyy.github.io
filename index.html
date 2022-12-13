@@ -8,11 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 	<script type="text/javascript" src="my.js"></script>
 </head>
 <body>
 	<div id="Home" class="home">
-		<nav>
+		<nav class="Nav">
 			<h1 class="logo">a.n_<span>dreyy</span></h1>
 			<ul id="sidemenu" class="navbar">
 				<li><a href="#Home" onclick="closemenu()">Home</a></li>
@@ -28,7 +29,7 @@
 		<div class="content">
 			<h4>Hello, my name is</h4>
 			<h1>Niño Andrey <span>Amboy</span></h1>
-			<h3>I'm a Web Developer.</h3>
+			<h3>I'm a <span class="typing"></span></h3>
 		</div>
 	</div>
 
@@ -55,7 +56,7 @@
 				<i ></i>
 				<h5>Web/App<span> Development</span></h5>
 				<div class="pra">
-					<p>Using computer programs (Visual Studio Code and Android Studio) and programming languages (C++, Java, Python, HTML, CSS, and JavaScript), I can make a responsive website and application.</p>
+					<p>Using computer programs (Visual Studio Code and Android Studio) and programming languages (C++, Java, Kotlin, Python, HTML, CSS, and JavaScript), I can make a responsive website and application.</p>
 
 					<p style="text-align: center;">
 						<a class="button" href="https://www.nobledesktop.com/classes-near-me/blog/web-development-vs-mobile-app-development#:~:text=Web%20Developers'%20sole%20focus%20is,tablet%20through%20an%20app%20store." target="_blank" rel="noopener noreferrer">Read More</a>
@@ -91,7 +92,7 @@
 
 	<div id="Contact" class="contact-me">
 		<p>Let Me Get You A Beautiful Website.</p>
-		<a class="button-two" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqVwhkNLZLMSDCdRSckLBGqbhHPqqrzxfZMhTSdGbdvbjNlXKnMHvMWZfvhdnrZNvSSZGB" target="_blank" rel="noopener noreferrer">Email Me</a>
+		<a class="button-two" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMGPcNCbxqHQDpRdrJPkDFmvpSKtcqdDWGHvdMDZgrxkwBzCtdPfsLLxvdCcxWCsbpBNNz" target="_blank" rel="noopener noreferrer">Email Me</a>
 	</div>
 
 	<footer>
@@ -117,7 +118,29 @@
 				} else {
 					sidemeu.style.left = "0";
 				}
-			}	
+			}
+
+		var typed = new Typed(".typing", {
+			strings: ["Web Developer", "App Developer", "UI/UX Designer"],
+			typeSpeed: 70,
+			backSpeed: 60,
+			loop: true
+		});
+		
+		const handleOnMouseMove = e => {
+		const { currentTarget: target } = e;
+
+		const rect = target.getBoundingClientRect(),
+			x = e.clientX - rect.left,
+			y = e.clientY - rect.top;
+
+		target.style.setProperty("--mouse-x", '${x}px');
+		target.style.setProperty("--mouse-y", '${y}px');
+		}
+		for(const card of document.querySelectorAll(".card")){
+		card.onmousemove = e => handleOnMouseMove(e);
+		}
+		
 	</script>
 </body>
 </html>
