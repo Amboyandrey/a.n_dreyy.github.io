@@ -92,7 +92,7 @@
 
 	<div id="Contact" class="contact-me">
 		<p>Let Me Get You A Beautiful Website.</p>
-		<a class="button-two" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMGPcNCbxqHQDpRdrJPkDFmvpSKtcqdDWGHvdMDZgrxkwBzCtdPfsLLxvdCcxWCsbpBNNz" target="_blank" rel="noopener noreferrer">Email Me</a>
+		<a class="button-two" href="#" onclick="sendEmail()" target="_blank" rel="noopener noreferrer">Email Me</a>
 	</div>
 
 	<footer>
@@ -141,6 +141,16 @@
 		card.onmousemove = e => handleOnMouseMove(e);
 		}
 		
+	</script>
+	
+	<script>
+		function sendEmail() {
+			var emailAddress = "andreyamboy13@gmail.com";
+			var emailSubject = "Website Inquiry";
+			var emailBody = "Hi, I'm interested in getting a website created. Can you please provide me with more information?";
+			var mailtoLink = "mailto:" + emailAddress + "?subject=" + emailSubject + "&body=" + emailBody;
+			window.location.href = mailtoLink;
+		}
 	</script>
 </body>
 </html>
