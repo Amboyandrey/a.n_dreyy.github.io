@@ -46,7 +46,8 @@ nav .navbar{
 nav.black ul{
 	background: rgb(0, 0, 0);
 	z-index: 4;
-	border-radius: 5px;
+	border-radius: 50px;
+	border: 3px solid #0d307c;
 }
 nav ul li{
 	list-style-type: none;
@@ -86,7 +87,8 @@ nav ul li a:hover{
 h1{
 	color: white;
 	margin: 20px 0px 20px;
-	font-size: 90px;
+	font-size: 70px;
+	font-weight: bold;
 }
 h3{
 	color: white;
